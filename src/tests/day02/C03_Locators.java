@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.util.List;
+
 public class C03_Locators {
     public static void main(String[] args) throws InterruptedException {
 
@@ -54,6 +56,10 @@ public class C03_Locators {
             System.out.println("sign out linki gorunmuyor, test FAILED");
         }
         //3. Sayfada kac tane link oldugunu bulun.
+
+
+        List<WebElement> linkler = driver.findElements(By.tagName("a"));
+        System.out.println("Sitenin giris sayfasinda olan link sayisi ===> " + linkler.size());
 
     }
 }
