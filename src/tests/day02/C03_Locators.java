@@ -65,9 +65,11 @@ public class C03_Locators {
         // elimizdeki listedeki tum webelement'lerin yazilarini for loop veya for-each loop ile yazdirabiliriz
         // tum elementler yazdirilacaksa bu durumda for-each loop daha kullanisli olacaktir
 
+        int sira=1;
         for (WebElement each:linkler
              ) {
-            System.out.println(each.getText());
+            System.out.println(sira + " " +each.getText());
+            sira++;
         }
 
         driver.close();
