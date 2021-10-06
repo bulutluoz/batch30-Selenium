@@ -61,5 +61,15 @@ public class C03_Locators {
         List<WebElement> linkler = driver.findElements(By.tagName("a"));
         System.out.println("Sitenin giris sayfasinda olan link sayisi ===> " + linkler.size());
 
+        // linklerin yazilarini yazdiralim
+        // elimizdeki listedeki tum webelement'lerin yazilarini for loop veya for-each loop ile yazdirabiliriz
+        // tum elementler yazdirilacaksa bu durumda for-each loop daha kullanisli olacaktir
+
+        for (WebElement each:linkler
+             ) {
+            System.out.println(each.getText());
+        }
+
+        driver.close();
     }
 }
